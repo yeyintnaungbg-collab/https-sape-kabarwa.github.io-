@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="my">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="စာပေကမ္ဘာ - မြန်မာစာအုပ်များနှင့် အသံစာအုပ်များ">
+  <title>စာပေကမ္ဘာ | Sape Kabarwa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">စာ</span><span>စာပေကမ္ဘာ<small>SAPE KABARWA</small></span></a>
+    <button id="langBtn" class="ghost" type="button">English</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow" data-my="ဒစ်ဂျစ်တယ် စာကြည့်တိုက်" data-en="DIGITAL LIBRARY">ဒစ်ဂျစ်တယ် စာကြည့်တိုက်</p>
+        <h1 data-my="စာပေကမ္ဘာမှ ကြိုဆိုပါတယ်" data-en="Welcome to Sape Kabarwa">စာပေကမ္ဘာမှ ကြိုဆိုပါတယ်</h1>
+        <p data-my="စာအုပ်များဖတ်ရှုပါ၊ အသံစာအုပ်များ နားဆင်ပါ၊ အချိန်မရွေး သိမ်းဆည်းပါ။"
+           data-en="Read books, listen to audiobooks, and save your favorites anytime.">စာအုပ်များဖတ်ရှုပါ၊ အသံစာအုပ်များ နားဆင်ပါ၊ အချိန်မရွေး သိမ်းဆည်းပါ။</p>
+        <a class="primary-btn" href="#books" data-my="စာအုပ်များ ကြည့်ရန်" data-en="Explore books">စာအုပ်များ ကြည့်ရန်</a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="book book-one"></div><div class="book book-two"></div><div class="book book-three"></div><span>READ<br>MORE</span></div>
+    </section>
+
+    <section class="stats" aria-label="Library highlights">
+      <div><strong id="bookCount">0</strong><span data-my="စာအုပ်များ" data-en="Books">စာအုပ်များ</span></div>
+      <div><strong id="audioCount">0</strong><span data-my="အသံဖိုင်များ" data-en="Audio">အသံဖိုင်များ</span></div>
+      <div><strong>24/7</strong><span data-my="အချိန်မရွေး" data-en="Anytime">အချိန်မရွေး</span></div>
+    </section>
+
+    <section id="books" class="section">
+      <div class="section-heading"><div><p class="eyebrow" data-my="ဖတ်ရှုလေ့လာရန်" data-en="READ & LEARN">ဖတ်ရှုလေ့လာရန်</p><h2 data-my="စာအုပ်များ" data-en="Books">စာအုပ်များ</h2></div></div>
+      <div class="toolbar">
+        <input id="searchInput" type="search" placeholder="စာအုပ်အမည် သို့မဟုတ် စာရေးသူ ရှာရန်..." aria-label="Search books">
+        <select id="categoryFilter" aria-label="Filter category"><option value="all">အမျိုးအစားအားလုံး</option></select>
+      </div>
+      <div id="bookGrid" class="grid"></div>
+    </section>
+
+    <section id="audio" class="section audio-section">
+      <div class="section-heading"><div><p class="eyebrow" data-my="နားဆင်လေ့လာရန်" data-en="LISTEN & LEARN">နားဆင်လေ့လာရန်</p><h2 data-my="အသံစာအုပ်များ" data-en="Audiobooks">အသံစာအုပ်များ</h2></div></div>
+      <div id="audioList" class="audio-list"></div>
+      <div class="player">
+        <div class="player-info"><strong id="nowPlaying">အသံဖိုင်တစ်ခု ရွေးချယ်ပါ</strong><span data-my="စာပေကမ္ဘာ အသံဖွင့်စက်" data-en="Sape Kabarwa audio player">စာပေကမ္ဘာ အသံဖွင့်စက်</span></div>
+        <audio id="audioPlayer" controls preload="none"></audio>
+      </div>
+    </section>
+  </main>
+
+  <footer><strong>စာပေကမ္ဘာ</strong><p data-my="စာပေကို ချစ်မြတ်နိုးသူများအတွက်" data-en="A home for readers and listeners">စာပေကို ချစ်မြတ်နိုးသူများအတွက်</p><small>© <span id="year"></span> Sape Kabarwa</small></footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
